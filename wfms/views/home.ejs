@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div style="float: right; padding:10px;"><a href="/SignIn" ><button class="btn btn-sm btn-success">SignIn</button></a></div>
+<div class="container" style="width: 80%">
+   <br>
+   <h4 style="text-align: center;">Employee DataBase</h4>
+   <table class="table" cellspacing="10">
+      <thead>
+         <tr>
+            <th scope="col">NAME</th>
+            <th scope="col">EMP_NAME</th>
+            <th scope="col">EMAIL_ID</th>
+            <th scope="col">DESIGNATION</th>
+            <th scope="col">CONTACT</th>
+            <th scope="col">JAVA</th>
+            <th scope="col">HTML</th>
+            <th scope="col">JAVASCRIPT</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+         </tr>
+      </thead>
+      <tbody>
+         <%list.forEach(list => {%>
+         <tr>
+            <form action="/update" method="POST">
+               <td><%=list.username%></td>
+               <td><%=list.ename%></td>
+               <td><%=list.email%></td>
+               <td><%=list.desgn%></td>
+               <td><%=list.contact%></td>
+               <td><%=list.java%></td>
+               <td><%=list.html%></td>
+               <td><%=list.javascript%></td>
+               <td><input type="submit" name="" value="Update" class="btn btn-sm btn-info" ></td>
+               <input type="hidden" name="id" value="<%=list.id%>">
+               <input type="hidden" name="name" value="<%=list.username%>">
+               <input type="hidden" name="ename" value="<%=list.ename%>">
+               <input type="hidden" name="email" value="<%=list.email%>">
+               <input type="hidden" name="desgn" value="<%=list.desgn%>">
+               <input type="hidden" name="contact" value="<%=list.contact%>">
+               <input type="hidden" name="java" value="<%=list.java%>">
+               <input type="hidden" name="html" value="<%=list.html%>">
+               <input type="hidden" name="javascript" value="<%=list.javascript%>">
+            </form>
+            <td>
+               <form action="<%=list.id%>/delete" method="POST"><input type="submit" name="" value="delete" class="btn btn-sm btn-danger"></form>
+            </td>
+         </tr>
+         <%})%>
+      </tbody>
+   </table>
+</div>
+
+
+<!--
+   <table>
+         <thead>
+         <tr>
+            <th scope="col">Name</th>
+            <th scope="col">HTML&CSS</th>
+            <th scope="col">JavaScript</th>
+            <th scope="col">Python</th>
+            <th scope="col">Java</th>
+            <th scope="col">Status</th>
+            <th scope="col">File</th>
+            <th scope="col">Assign</th>
+         </tr>
+         </thead>
+         <tbody>
+            <%list.forEach(list => {%>
+            <tr>
+               <td><%=list.ename%></td>
+               <td><%=list.html%></td>
+               <td><%=list.js%></td>
+               <td><%=list.py%></td>
+               <td><%=list.java%></td>
+               <td>Available</td>
+               <td><form ></form><input type="choose" name="file" value="file"></font></td>
+               <td><form action="<%=list.id%>/Assign" method="POST"><input type="submit" name="assign" value="Assign"></form></td>
+            </tr>
+            <%})%>
+         </tbody>
+      </table>
+      -->

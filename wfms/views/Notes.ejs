@@ -1,0 +1,55 @@
+<%- include('partials/header.ejs') %>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link rel="stylesheet" type="text/css" href="../stylesheets/notes.css">
+<body>
+  <fieldset>
+  	<div class="search-box">
+<input type="text" class="search-txt" placeholder="Search...."><a class="search-btn" href=""><i class="fa fa-search  search" aria-hidden="true"></i></a>
+</div>
+<div class="input_fields_wrap">
+	<span><h3>NOTES</h3></span><button class="add_field_button"><i class="fa fa-plus " aria-hidden="true"></i>
+</button>
+
+<hr>
+<div class="notes">
+        <input type="text" name="mytext[]" placeholder="Title"><br>
+        <textarea name="desc[]" placeholder="Description...."></textarea>
+    </div>
+    <br/>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    var max_fields      = 10; //maximum input boxes allowed
+    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+    var add_button      = $(".add_field_button"); //Add button ID
+
+    var x = 1; //initlal text box count
+    $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+            x++; //text box increment
+            $(wrapper).append('<br/><div class="notes">' +
+                '<input name="mytext[]" placeholder="Title"><br>' +
+                '<textarea name="desc[]"placeholder="Description...." ></textarea>' +
+                '<a href="#" class="remove_field"><i class="fa fa-trash " aria-hidden="true"></i></a>' +
+            '</div>');
+    }
+    });
+
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+        e.preventDefault(); $(this).parent('div').remove(); x--;
+    })
+});
+</script>
+  </fieldset>
+
+</body>
+</html>

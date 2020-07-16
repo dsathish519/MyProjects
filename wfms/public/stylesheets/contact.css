@@ -1,0 +1,35 @@
+	body{
+		font-family: 'Lato', sans-serif;
+		background-image: url("../images/background.jpg" );
+        background-size: cover;
+        font-weight: 150px;
+	}
+	form{ 
+		margin-left: 180px;
+		float: left;
+		line-height: 40px;
+		width: 150px;
+
+	}a{
+		color: black;
+	}
+	
+	hr{
+		position: relative;
+		width: 75%;
+		color: #2e3141;
+	}
+	input{
+		height: 40px; 
+		width: 350px;
+		opacity: 0.4;
+	}
+	pre{
+		margin-right: 150px;
+	}
+	button{
+		height: 40px; 
+		width: 150px;
+	    opacity: 0.6;
+	    margin-right: 10px;
+	}

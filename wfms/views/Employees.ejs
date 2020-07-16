@@ -1,0 +1,52 @@
+<%-	include('partials/header2.ejs') %>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EmployeeData</title>
+	<style type="text/css">
+		.layout{
+			margin-left: 15%;
+			margin-top: 5%;
+		}
+		table{
+			font-family: arial, sans-serif;
+  			border-collapse: collapse;
+  			width: 100%;
+		}
+		td, th {
+  			border: 1px solid grey;
+  			text-align: center;
+  			padding: 8px;
+		}
+	</style>
+</head>
+<body>
+	<div class="layout">
+		<h3 align="center">Employee Database</h3>
+		<table>
+			<thead>
+			<tr>
+				<th scope="col">UserName</th>
+				<th scope="col">EmployeeName</th>
+				<th scope="col">EmailId</th>
+				<th scope="col">Contact</th>
+				<th scope="col">Designation</th>
+				<th scope="col">Delete</th>
+			</tr>
+			</thead>
+			<tbody>
+				<%list.forEach(list => {%>
+				<tr>
+					<td><%=list.username%></td>
+					<td><%=list.ename%></td>
+					<td><%=list.email%></td>
+					<td><%=list.contact%></td>
+					<td><%=list.desgn%></td>
+					<td><form action="<%=list.id%>/delete" method="POST"><input type="submit" name="" value="delete"></form></td>
+				</tr>
+				<%})%>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

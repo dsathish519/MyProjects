@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/home.css">
+</head>
+<body>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <center>
+    <fieldset>
+      <br>
+    <h3 style="color: white;">MENU</h3>
+    <hr>
+    <a href="#">Home</a>
+    <a href="LogIn">LogIn</a>
+    <a href="SignIn">SignUp</a>
+    <a href="Contact">Contact</a>
+    <a href="HomeHelp">Help</a>
+    </fieldset>
+  </center>
+  </div>
+</div>
+<button onclick="openNav()">MENU&nbsp;&nbsp;<span style="font-size:20px;cursor:pointer">&#9776;</span></button>
+<br>
+<div>
+            <div class="head">
+              <span class="logo"><i class="fa fa-google-wallet"></i>&nbsp;&nbsp;</span><span style="color: white; font-size: 30px;text-shadow: 5px 2px 5px black;"><b>Work Flow Management System</b></span>
+
+              <hr style="width: 70%;margin-left: 2px;">
+              <p style="color: white;font-size: 20px;">Innovation Strats From us .&nbsp;&nbsp; <a href="https://code.swecha.org/users/sign_in">LearnMore.</a></p>
+            </div>
+            <div class="grid-container">
+    <div><br><p class="text" >Work flow management system helps us to schedule the work .
+      Learn More &nbsp;&nbsp;<i class="fa fa-chevron-circle-down" onclick="myFunction()" style="font-size:20px;color:#e1e3e6;"></i></p><div id="myDIV" class="myDIV">
+  <br>
+  This project is very helpful for manage employee’s workload; it consists of employee working details, employee leave details, employee designation details, employee experience details, software project information, number of resources allocated to the project, project completion details.
+Employee salary details, etc. This .Net application mainly works with three modules those are administrator module for manage the company, project engineer module for developing software application and project manager module for managing the project.
+</div></div>
+      <div>
+      <img src="images/team.jpg" class="img"></div>
+      </div>
+
+</div>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.display = "none";
+}
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<%- include("partials/header.ejs")%>
+<html>
+<head>
+	<title>Profile</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/profile.css">
+</head>
+<body>
+  <div class="row">
+    <div class="column">
+      <img src="images/team.jpg" width="250px" height="250px" alt="images/team.jp"><br>
+    <label>Employee Name :&nbsp;</label><input type="text" name="ename" value="<%= name %>"><br>
+    <label>Email-Id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</label><input type="text" name="email" value="<%= email %>"><br>
+    <label>Designation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</label><input type="text" name="desgn" value="<%= desgn %>"><br>
+    <label>Contact no. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</label><input type="text" name="contact" value="<%= contact %>"><br>
+    </div>
+    <div class="column1">
+      <h3>Educational Skills :</h3><br>
+      <center>
+      <label>HTML & CSS :</label><input type="text" name="html">
+      <br>
+      <label>JAVASCRIPT &nbsp;:</label><input type="text" name="js">
+      <br>
+      <label>PYTHON &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label><input type="text" name="py">
+      <br>
+      <label>JAVA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label><input type="text" name="java">
+      </center>
+      <h3>Description :</h3>
+      <center>
+      <textarea name="desc" placeholder="<%= desc %>" rows="8" style="width: 400px;background:none;border: none;"></textarea>
+      </center>
+    </div>
+  </div>
+  </body>
+  </html>

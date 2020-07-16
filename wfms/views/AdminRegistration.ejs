@@ -1,0 +1,58 @@
+<%-	include('partials/header2.ejs') %>
+<html>
+<head>
+  <title>User Profile</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/reg.css">
+</head>
+<body>
+  <form action="/Registration" method="POST">
+  <div class="row">
+    <div class="column">
+      <img src="images/team.jpg" width="250px" height="250px" alt="images/team.jp"><br>
+    <label>Employee Name :&nbsp;</label><input type="text" name="ename"><br>
+    <label>Email-Id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</label><input type="text" name="email" ><br>
+    <label>Designation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</label><input type="text" name="desgn" ><br>
+    <label>Contact no. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</label><input type="text" name="contact"><br>
+    <input type="submit" value="submit">
+    </div>
+    <div class="column1">
+      <h3>Educational Skills : </h3><br>
+      <center>
+      <label>HTML & CSS :</label>
+      <select>
+        <option default="true">Novice</option>
+        <option>Beginner</option>
+        <option>Proficient</option>
+        <option>Expert</option>
+      </select><br>
+      <label>JAVASCRIPT &nbsp;:</label>
+      <select>
+        <option default="true">Novice</option>
+        <option>Beginner</option>
+        <option>Proficient</option>
+        <option>Expert</option>
+      </select><br>
+      <label>PYTHON &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+      <select>
+        <option default="true">Novice</option>
+        <option>Beginner</option>
+        <option>Proficient</option>
+        <option>Expert</option>
+      </select><br>
+      <label>JAVA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+      <select>
+        <option default="true">Novice</option>
+        <option>Beginner</option>
+        <option>Proficient</option>
+        <option>Expert</option>
+      </select>
+      </center>
+      <h3>Description :</h3>
+      <center>
+      <textarea name="desc" rows="8" style="width: 400px;opacity: 0.5"></textarea>
+      </center>
+    </div>
+  </div>
+</form>
+</body>
+</html>

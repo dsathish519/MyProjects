@@ -1,0 +1,33 @@
+<%-	include('partials/header2.ejs') %>
+<html>
+<head>
+  <script src="../stylesheets/workflow.css" referrerpolicy="origin"></script>
+  <script>tinymce.init({selector:'textarea'});</script>
+  <style type="text/css">
+    .workarea{
+      margin-top: 5%;
+      margin-left: 15%;
+    }
+    .tox .tox-edit-area__iframe{
+      background: none;
+      border: 1px solid grey;
+    }
+    .tox .tox-menubar{
+      background: none;
+      border: 1px solid grey;
+    }
+    .tox .tox-toolbar{
+      background: none;
+      border: 1px solid grey;
+    }
+    .tox-notifications-container{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="workarea">
+  <textarea style="height: 550px;"></textarea>
+</div>
+</body>
+</html>
